@@ -9,7 +9,7 @@ import androidx.annotation.RequiresApi
 import androidx.viewpager2.widget.ViewPager2
 import kotlinx.android.synthetic.main.onboarding_view.view.*
 import me.inassar.onboardingfreebi.R
-import me.inassar.onboardingfreebi.feature.onboarding.OnBoaradingPagerAdapter
+import me.inassar.onboardingfreebi.feature.onboarding.OnBoardingPagerAdapter
 import me.inassar.onboardingfreebi.feature.onboarding.OnBoardingPage
 import me.inassar.onboardingfreebi.hide
 import me.inassar.onboardingfreebi.show
@@ -30,7 +30,7 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 
     private fun setUpSlider() {
         with(slider) {
-            adapter = OnBoaradingPagerAdapter()
+            adapter = OnBoardingPagerAdapter()
             setPageTransformer { page, position ->
                 setParallaxTransformation(page , position)
             }

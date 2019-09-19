@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.onboarding_page_item.view.*
 import me.inassar.onboardingfreebi.R
 
-class OnBoaradingPagerAdapter(private val onBoardingPageList:Array<OnBoardingPage> = OnBoardingPage.values())
+class OnBoardingPagerAdapter(private val onBoardingPageList:Array<OnBoardingPage> = OnBoardingPage.values())
     : RecyclerView.Adapter<PagerViewHolder>() {
 
 
