@@ -9,13 +9,13 @@ import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.toolbar.*
 import me.inassar.onboardingfreebi.R
 import me.inassar.onboardingfreebi.config.AppPrefs
+import me.inassar.onboardingfreebi.feature.onboarding.OnBoardingActivity
 import me.inassar.onboardingfreebi.hide
 import me.inassar.onboardingfreebi.show
 import me.inassar.onboardingfreebi.state.LoginState
 import me.inassar.onboardingfreebi.state.ScreenState
 import me.inassar.onboardingfreebi.toolbar
 import me.inassar.onboardingfreebi.view.activity.HomeActivity
-import me.inassar.onboardingfreebi.view.activity.OnBoardingActivity
 import me.inassar.onboardingfreebi.viewmodel.LoginViewModel
 
 class LoginActivity : AppCompatActivity() {
