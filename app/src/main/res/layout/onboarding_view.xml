@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.constraintlayout.motion.widget.MotionLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/onboardingRoot"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layoutDescription="@xml/oboarding_main_scene"
 >
 
     <androidx.viewpager2.widget.ViewPager2
@@ -22,46 +24,60 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.8"/>
 
-    <com.rd.PageIndicatorView
+    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
             android:id="@+id/page_indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:dotsColor="@color/colorPurple"
+            app:dotsStrokeColor="@color/colorPurple"
+            app:dotsCornerRadius="8dp"
+            app:dotsSize="@dimen/margin_8"
+            app:dotsSpacing="@dimen/margin_8"
+            app:dotsStrokeWidth="1dp"
+            app:layout_constraintTop_toBottomOf="@+id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:piv_animationType="worm"
-            app:layout_constraintTop_toBottomOf="@+id/guideline"/>
+    />
 
-    <androidx.appcompat.widget.AppCompatButton
+
+    <com.google.android.material.button.MaterialButton
             android:id="@+id/nextBtn"
             style="@style/Widget.MaterialComponents.Button.TextButton.OnBoardTextButton"
             android:text="@string/next"
+            android:layout_marginBottom="@dimen/margin_16"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/page_indicator"/>
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            app:layout_constraintTop_toBottomOf="@+id/page_indicator"
+            app:layout_constraintHorizontal_chainStyle="spread"/>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
             android:id="@+id/startBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/purple_btn_bg"
-            android:minWidth="140dp"
-            android:minHeight="40dp"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:backgroundTint="@color/colorPurple"
+            app:cornerRadius="24dp"
+            android:paddingStart="@dimen/padding_30"
+            android:paddingEnd="@dimen/padding_30"
+            android:paddingTop="@dimen/margin_16"
+            android:paddingBottom="@dimen/margin_16"
             android:text="@string/get_started"
-            android:translationY="100dp"
             android:textColor="@color/colorWhite"
-            app:layout_constraintBottom_toBottomOf="@+id/slider"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/page_indicator"/>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
             android:id="@+id/skipBtn"
             style="@style/Widget.MaterialComponents.Button.TextButton.OnBoardTextButton"
             android:text="@string/skip"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/page_indicator"
-            android:translationY="100dp"
-    />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginBottom="@dimen/margin_16"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"/>
+</androidx.constraintlayout.motion.widget.MotionLayout>
